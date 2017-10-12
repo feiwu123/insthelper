@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context="cn.com.xscaler.insthelper.ActivityLogin">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        >
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_launcher_big"
+            android:id="@+id/app_icon"
+            android:layout_alignParentTop="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chat_sdk_et_mail"
+            android:inputType="text"
+            android:maxLines="1"
+            android:ems="10"
+            android:nextFocusDown="@+id/chat_sdk_et_password"
+            android:gravity="center"
+            android:layout_above="@id/chat_sdk_et_password"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:hint="@string/email" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/chat_sdk_et_password"
+            android:layout_above="@+id/linear_buttons"
+            android:layout_alignLeft="@+id/chat_sdk_et_mail"
+            android:layout_alignStart="@+id/chat_sdk_et_mail"
+            android:hint="@string/password"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/li_version"
+            android:layout_marginTop="10dp"
+            android:id="@+id/linear_buttons"
+            android:layout_centerHorizontal="true">
+
+            <Button
+                android:id="@+id/chat_sdk_btn_login"
+                style="@style/LoginButtonsStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/chat_sdk_login_button_selector"
+                android:onClick="ButtonLoginClicked"
+                android:text="@string/login" />
+
+            <Button
+                android:id="@+id/chat_sdk_btn_register"
+                style="@style/LoginButtonsStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/chat_sdk_register_button_selector"
+                android:onClick="ButtonRegisterClicked"
+                android:text="@string/register" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/li_version"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/chat_sdk_version_name"
+                android:ems="10"
+                android:gravity="center"
+                android:text="@string/chat_sdk_version"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

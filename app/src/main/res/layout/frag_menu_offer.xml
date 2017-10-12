@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/msg_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.com.xscaler.insthelper.FragMenuOffer">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:text="Please Input Job Description:" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView"
+            android:background="@color/colorWhite"
+            android:lines="10"
+            android:scrollHorizontally="false"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:imeOptions="actionDone"
+            android:maxLines="10"
+            android:gravity="top"
+            android:text="Write your job message here" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/li_buttons"
+            android:layout_below="@id/editText" >
+
+            <Button
+                android:id="@+id/photo"
+                style="@style/LoginButtonsStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/chat_sdk_login_button_selector"
+                android:text="Camera" />
+
+            <Button
+                android:id="@+id/voice"
+                style="@style/LoginButtonsStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/chat_sdk_login_button_selector"
+                android:text="Voice" />
+
+            <Button
+                android:id="@+id/button"
+                style="@style/LoginButtonsStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/chat_sdk_register_button_selector"
+                android:text="Create Offer" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/li_buttons">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/LoginButtonsStyle"
+                android:id="@+id/map"
+                android:background="@drawable/chat_sdk_login_button_selector"
+                android:text="Map"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/OutMsg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text=""
+            android:layout_below="@id/li_buttons" />
+
+    </RelativeLayout>
+
+ </LinearLayout>
